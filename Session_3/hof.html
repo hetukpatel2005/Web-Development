@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        
+        function wish() {
+            console.log("Good Day!");
+        }
+
+        //12. Async Function
+        async function myFunction(callback) {
+            console.log("Welcome To Async Function!");
+            
+            // await new Promise(resolve => setTimeout(callback, 3000))
+            
+            setTimeout(callback, 3000);
+            setTimeout(callback, 1000);
+       
+            console.log("Welcome To Async Function!");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myFunction(wish)">Async Function</button>
+</body>
+</html>
