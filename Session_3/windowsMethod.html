@@ -2,24 +2,38 @@
 <html lang="en">
 <head>
     <script>
-        function checkSports() {
-            var sports = document.querySelector("h1").textContent;
-            var sports = document.querySelector("h1").innerHTML;
-            var sports = document.querySelector("h1").innerText;
-            document.getElementById("output").innerHTML = sports;
+        function getInfo() {
+            var info = document.querySelectorAll("input");
+
+            info.forEach(
+                function(info){
+                    // alert(info.value);
+                    document.getElementById("output").innerHTML+=info.value+"<br>";
+                }
+            );
+            
+            var sports = document.querySelectorAll("input[type='checkbox']");
+            document.getElementById("output").innerHTML+="<br> You Play: ";
+            sports.forEach(
+                function(sports){
+                    if(sports.checked)
+                    document.getElementById("output").innerHTML+=sports.value + " ";
+            }
+        );
+        // alert();
         }
     </script>
 </head>
 <body>
-    <!-- Name: <input type="text" id="info"><br><br>
-    Email: <input type="text" id="info"><br> -->
-    <!-- <input type="radio" name="sports" value="cricket" class="sports">Cricket
-    <input type="radio" name="sports" value="football" class="sports">Football
-    <input type="radio" name="sports" value="squash" class="sports">Squash
-    <br> -->
-    <h1>Hello</h1>
-    <h1>Good Morning</h1><br>
+    Name: <input type="text"><br><br>
+    Email: <input type="text"><br><br>
+    City: <input type="text"><br>
+    <hr>
+    Which All Sports Do You Play:
+    <input type="checkbox" name="sports" value="table tennis">Table Tennis
+    <input type="checkbox" name="sports" value="badminton">Badminton
+    <input type="checkbox" name="sports" value="futsal">Futsal
     <p id="output"></p>
-    <input type="submit" value="Submit" onclick="checkSports()">
+    <input type="submit" value="Register" onclick="getInfo()">
 </body>
 </html>
