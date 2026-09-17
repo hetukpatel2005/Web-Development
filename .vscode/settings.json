@@ -1,5 +1,7 @@
 {
     "scm.diffDecorationsGutterPattern": {
         "added": true
-    }
+    },
+    "gitlens.graph.autoFetch.enabled": true,
+    "gitlens.graph.changesColumn.enabled": true
 }

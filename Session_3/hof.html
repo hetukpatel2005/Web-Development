@@ -1,26 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script>
-        
-        function wish() {
-            console.log("Good Day!");
-        }
-
-        //12. Async Function
-        async function myFunction(callback) {
-            console.log("Welcome To Async Function!");
-            
-            // await new Promise(resolve => setTimeout(callback, 3000))
-            
-            setTimeout(callback, 3000);
-            setTimeout(callback, 1000);
-       
-            console.log("Welcome To Async Function!");
-        }
-    </script>
 </head>
 <body>
-    <button onclick="myFunction(wish)">Async Function</button>
+    <div id="output">Hello MCAFY <span style="display: none;">Welcome To KJSIM</span></div>
+    <script>
+        const mydiv = document.getElementById("output");
+        console.log("inerHTML: ", mydiv.innerHTML);
+        console.log("inerText: ", mydiv.innerText);
+        console.log("textContent: ", mydiv.textContent);
+    </script>
 </body>
 </html>

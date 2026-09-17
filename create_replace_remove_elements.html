@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function createListItem(){
+            const mySubs=document.getElementById("mySubs");
+            const newList=document.querySelector("input").value;
+            mySubs.append(newList);
+        }
+        function replaceFirstListItem(){
+            const mySubs=document.getElementById("mySubs");
+            const repLi=document.querySelector("p");
+            const newList=document.querySelector("p");
+            
+            newList.innerText="Replaced Item";
+            mySubs.replaceChild(repLi,newList);
+            
+        }
+        function removeListItem(){
+            const mySubs=document.getElementById("mySubs");
+            const newList=document.querySelector("p");
+            mySubs.removeChild(newList);
+        }
+    </script>
+</head>
+<body>
+    <h1>My Subject List</h1>
+    Input: <input type="text" id="input"><br><br>
+    Input To Replace <input type="text" id="textReplace"><br><br>
+    Replace: <input type="text" id="replaceInput"><br><br>
+    <ul id="mySubs"></ul>
+    <br>
+    <button onclick="createListItem()">Create New List Items</button>
+    <button onclick="replaceFirstListItem()">Replace 1st Element</button>
+    <button onclick="removeListItem()">Remove Element</button>
+</body>
+</html>
