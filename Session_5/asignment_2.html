@@ -10,7 +10,6 @@
             const tableInfo = document.getElementById('table1');    
             var name = document.getElementById('name').value;
             var course = document.getElementById('course').value;
-            console.log(name, course);
             const newRecord = document.createElement('tr');
             newRecord.setAttribute('id','rec' + rec);
             rec += 1;
@@ -25,27 +24,27 @@
         }
     </script>
     <style>
-        table,tr,td{
+        table,tr,td,th{
             border: 1px solid;
             border-collapse: collapse;
             text-align: center;
-            padding: 10px;
+            padding: 5px;
         }
     </style>
 </head>
 <body>
     <h1>Creating table dynamically</h1>
-    Name:<input id="name">
-    Course:<input id="course">
+    Name: <input id="name">
+    <br><br>    
+    Course: <input id="course">
     <br><br>
     <table style="border-style: solid;" id="table1">
         <tr id="heading">
-            <th>Course</th>
             <th>Name</th>
+            <th>Course</th>
         </tr>
-        <td></td>
     </table>
     <br><br>
-    <button onclick="createRows()">create row</button>
+    <button onclick="createRows()">Create Row</button>
 </body>
 </html>

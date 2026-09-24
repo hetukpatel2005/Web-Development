@@ -3,5 +3,6 @@
         "added": true
     },
     "gitlens.graph.autoFetch.enabled": true,
-    "gitlens.graph.changesColumn.enabled": true
+    "gitlens.graph.changesColumn.enabled": true,
+    "git.decorations.enabled": true
 }
