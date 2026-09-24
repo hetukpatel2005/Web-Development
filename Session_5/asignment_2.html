@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create table dynamically</title>
+    <script>
+        let rec = 0;
+        function createRows(){
+            const tableInfo = document.getElementById('table1');
+            var name = document.getElementById('name').value;
+            var course = document.getElementById('course').value;
+            console.log(name, course);
+            const newRecord = document.createElement('tr');
+            newRecord.setAttribute('id','rec' + rec);
+            rec += 1;
+            // CORRECTED: Create brand new <td> elements for this row
+            const td1 = document.createElement('td'); 
+            td1.innerText = name;
+            const td2 = document.createElement('td');
+            td2.innerText = course;
+            newRecord.appendChild(td1);
+            newRecord.appendChild(td2);
+            tableInfo.appendChild(newRecord);;
+        }
+    </script>
+    <style>
+        table,tr,td{
+            border: 1px solid;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Creating table dynamically</h1>
+    Name:<input id="name">
+    Course:<input id="course">
+    <br><br>
+    <table style="border-style: solid;" id="table1">
+        <tr id="heading">
+            <th>Course</th>
+            <th>Name</th>
+        </tr>
+        <td></td>
+    </table>
+    <br><br>
+    <button onclick="createRows()">create row</button>
+</body>
+</html>
